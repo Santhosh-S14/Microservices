@@ -11,9 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Getter 
-@Setter 
-@ToString
+@Getter @Setter @ToString
 public class Accounts {
 
 	@Column(name = "customer_id")
@@ -27,4 +25,5 @@ public class Accounts {
 	private String branchAddress;
 	@Column(name = "create_dt")
 	private LocalDate createDt;
+	
 }
