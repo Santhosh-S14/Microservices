@@ -14,5 +14,5 @@ import com.eazybytes.accounts.model.Loans;
 @FeignClient("loans")
 public interface LoansFeignClient {
 	@RequestMapping(method = RequestMethod.POST, value = "myLoans", consumes = "application/json")
-	List<Loans> getLoansDetails(@RequestBody Customer customer);
+	List<Loans> getLoansDetails(String correlationId, @RequestBody Customer customer);
 }
